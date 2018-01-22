@@ -7,6 +7,6 @@
 <title>inicio</title>
 </head>
 <body>
-  Hola ${user}
+  Hola ${user.user}
 </body>
 </html>
