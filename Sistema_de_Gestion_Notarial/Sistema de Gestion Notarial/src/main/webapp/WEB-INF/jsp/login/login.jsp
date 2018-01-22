@@ -62,7 +62,7 @@
                         		</div>
                             </div>
                             <div class="form-bottom">
-			                    <form role="form" action="" method="post" class="login-form">
+			                    <form role="form" action="login/validation" method="post" class="login-form">
 			                    	<div class="form-group">
 			                    		<label class="sr-only" for="form-username">Username</label>
 			                        	<input type="text" name="form-username" placeholder="Username..." class="form-username form-control" id="form-username">
@@ -96,6 +96,7 @@
             </div>
             
         </div>
+        
 
 
         <!-- Javascript -->
@@ -103,6 +104,7 @@
         <script src="/resources/bootstrap/js/bootstrap.min.js"></script>
         <script src="/resources/js/jquery.backstretch.min.js"></script>
         <script src="/resources/js/scripts.js"></script>
+        <script src="/resources/js/login-validation.js"></script>
         
         <!--[if lt IE 10]>
             <script src="assets/js/placeholder.js"></script>
