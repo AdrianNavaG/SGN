@@ -4,6 +4,12 @@ public class User {
 	
 	private String user;
 	private String password;
+	private boolean validate;
+	
+	public User(String user, String password) {
+		this.user = user;
+		this.password = password;
+	}
 	
 	public String getUser() {
 		return user;
@@ -16,6 +22,12 @@ public class User {
 	}
 	public void setPassword(String password) {
 		this.password = password;
+	}
+	public boolean getValidate() {
+		return validate;
+	}
+	public void setValidate(boolean validate) {
+		this.validate = validate;
 	}
 	
 	
