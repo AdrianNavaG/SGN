@@ -2,20 +2,22 @@ package com.sssolutions.sgn.dao;
 
 public class User {
 	
-	private String user;
+	private String username;
 	private String password;
-	private boolean validate;
 	
-	public User(String user, String password) {
-		this.user = user;
+	public User(String username, String password) {
+		this.username = username;
 		this.password = password;
+	}
+	public User() {
+
 	}
 	
 	public String getUser() {
-		return user;
+		return username;
 	}
-	public void setUser(String user) {
-		this.user = user;
+	public void setUser(String username) {
+		this.username = username;
 	}
 	public String getPassword() {
 		return password;
@@ -23,13 +25,5 @@ public class User {
 	public void setPassword(String password) {
 		this.password = password;
 	}
-	public boolean getValidate() {
-		return validate;
-	}
-	public void setValidate(boolean validate) {
-		this.validate = validate;
-	}
-	
-	
 
 }

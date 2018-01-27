@@ -40,8 +40,8 @@ public class LoginController {
 		
 		userDao = loginService.validateLogin(user, password);	
 		
-		if(userDao.getValidate())
-			view="login/inicio";
+		if(userDao.getUser() != null)
+			view="sufee-admin-dashboard-master/index";
 	
 		ModelAndView login = new ModelAndView(view);
 		

@@ -20,16 +20,6 @@ public class LoginService implements ILoginService{
 		User userDao;
 
 		userDao = loginRepository.validateLogin(user, password);
-		
-		System.out.println(userDao.getUser());
-		System.out.println(userDao.getPassword());
-		//logica de negocio
-		
-		if(userDao.getUser().equals(user) && userDao.getPassword().equals(password)) {
-			userDao.setValidate(true);
-		}else {
-			userDao.setValidate(false);
-		}
 
 		return userDao;
 	}
