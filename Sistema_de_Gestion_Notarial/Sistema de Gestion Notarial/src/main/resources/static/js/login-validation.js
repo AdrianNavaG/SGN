@@ -6,7 +6,7 @@ function validar(){
 
 	$.ajax({
 		type: "POST",
-		url: "login/validation", 
+		url: "validation", 
 		data:{ 
 			useretiqueta:user, 
 			passwordetiqueta:password},
