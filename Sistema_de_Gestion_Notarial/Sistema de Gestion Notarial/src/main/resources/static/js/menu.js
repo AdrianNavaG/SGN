@@ -28,7 +28,7 @@ function altaexpediente(){
 						"</div>"+
 						"<div class='form-group col-xs-10 col-sm-4 col-md-4 col-lg-4'>"+
 							"<label for='credito' class='form-control-label'>Cr&eacutedito</label>"+
-								"<input type='text' id='credito' placeholder='Ingresa Crédito'"+
+								"<input type='text' id='credito' placeholder='Ingresa Credito'"+
 								"class='form-control'>"+
 						"</div>"+
 						"<div class='form-group col-xs-10 col-sm-4 col-md-4 col-lg-4'>"+
