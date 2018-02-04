@@ -21,14 +21,11 @@
     <link rel="stylesheet" href="/resources/assets/css/cs-skin-elastic.css">
     <!-- <link rel="stylesheet" href="/resources/assets/css/bootstrap-select.less"> -->
     <link rel="stylesheet" href="/resources/assets/scss/style.css">
-
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800' rel='stylesheet' type='text/css'>
-    
     <script src="/resources/js/jquery-1.11.1.min.js"></script>
-    <script src="/resources/js/expediente.js"></script>
-     <script src="/resources/js/menu.js"></script>
-     
-<%--      <jsp:include page="/WEB-INF/jsp/sufee-admin-dashboard-master/alta-expediente.jsp" /> --%>
+
+     <script src="/resources/js/alta-expediente-form.js"></script>
+     <script src="/resources/js/save-expediente.js"></script>
 
 </head>
 <body>

@@ -32,7 +32,6 @@ public class ExpedientController {
 			){
 				
 	    Expediente expedienteDao = new Expediente();
-	    expedienteDao.setIdExpediente(1);
 	    expedienteDao.setExpediente(expediente);
 	    expedienteDao.setFecha(fechaApertura);
 	    expedienteDao.setNss(nss);
@@ -41,13 +40,17 @@ public class ExpedientController {
 	    expedienteDao.setOtorgante(otorgante);
 	    expedienteDao.setResponsable(responsable);
 	    
-	    System.out.println("Expediente: "+expedienteDao.getExpediente());
-	    
 	    int save = expedienteService.saveExpedient(expedienteDao);
 	    
 	    
-		ModelAndView mav = new ModelAndView("");
+	    String view = "fallido";
+	    if(save==1) {
+	    	view="exitoso";
+	    }
 		
+	    System.out.println("Resultado: "+view);
+	    
+	    ModelAndView mav = new ModelAndView();
 		
 		return mav;
 	}
