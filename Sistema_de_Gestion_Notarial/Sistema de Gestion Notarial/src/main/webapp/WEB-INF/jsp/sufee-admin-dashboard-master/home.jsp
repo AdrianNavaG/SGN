@@ -1,8 +1,9 @@
-<!doctype html>
+<!DOCTYPE html>
+<html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang=""> <!--<![endif]-->
+<!-- [if gt IE 8]><! <html class="no-js" lang=""> <![endif] -->
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -19,13 +20,21 @@
     <link rel="stylesheet" href="/resources/assets/css/themify-icons.css">
     <link rel="stylesheet" href="/resources/assets/css/flag-icon.min.css">
     <link rel="stylesheet" href="/resources/assets/css/cs-skin-elastic.css">
+    <link rel="stylesheet" href="/resources/assets/css/lib/datatable/dataTables.bootstrap.min.css">
+   
     <!-- <link rel="stylesheet" href="/resources/assets/css/bootstrap-select.less"> -->
     <link rel="stylesheet" href="/resources/assets/scss/style.css">
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800' rel='stylesheet' type='text/css'>
     <script src="/resources/js/jquery-1.11.1.min.js"></script>
-
+    
+     <script src="/resources/js/constants.js"></script>
+     
      <script src="/resources/js/alta-expediente-form.js"></script>
      <script src="/resources/js/save-expediente.js"></script>
+     <script src="/resources/js/alta-expediente-validation.js"></script>
+     
+     <script src="/resources/js/busqueda-expediente-form.js"></script>
+     
 
 </head>
 <body>
@@ -51,7 +60,7 @@
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-folder"></i>Expedientes</a>
                         <ul class="sub-menu children dropdown-menu">
                             <li><i class="fa fa-folder-open-o"></i><a onClick="altaexpediente()" href="#">Alta de Expedientes</a></li>
-                            <li><i class="fa fa-search"></i><a href="#">Busqueda de Expedientes</a></li>
+                            <li><i class="fa fa-search"></i><a onClick="busquedaexpediente()" href="#">Busqueda de Expedientes</a></li>
                             <li><i class="fa fa-file-text"></i><a href="#">Reporte de Expedientes</a></li>
                             <li><i class="fa fa-file-text"></i><a href="#">Reporte de Expedientes</a></li>
                             <li><i class="fa fa-file-text"></i><a href="#">Reporte de Expedientes</a></li>
@@ -127,6 +136,25 @@
     </div><!-- /#right-panel -->
 
     <!-- Right Panel -->
+    
+     <button type="button" hidden="hidden" id="modalAlert"class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal"></button>
+	  <!-- Modal -->
+	  <div class="modal fade" id="myModal" role="dialog">
+	    <div class="modal-dialog modal-xs">
+	      <div class="modal-content">
+	        <div class="modal-header">
+	        <h6 class="modal-title">Mensaje</h6>
+	          <button type="button" class="close" data-dismiss="modal">&times;</button>
+	        </div>
+	        <div class="modal-body">
+	          <p> <label id="labelModal"></label></p>
+	        </div>
+	        <div class="modal-footer">
+	          <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+	        </div>
+	      </div>
+	    </div>
+	  </div>
 
 
     <script src="/resources/assets/js/vendor/jquery-2.1.4.min.js"></script>

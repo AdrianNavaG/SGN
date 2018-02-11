@@ -11,7 +11,7 @@ function validar(){
 			useretiqueta:user, 
 			passwordetiqueta:password},
 		success: function(response){
-			$("#result").html(response);
+//			$("#result").html(response);
 		}
 	});
 }

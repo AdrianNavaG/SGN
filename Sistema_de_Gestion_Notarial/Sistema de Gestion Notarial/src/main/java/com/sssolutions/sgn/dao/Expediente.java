@@ -12,7 +12,45 @@ public class Expediente {
 	private String otorgante;
 	private String operacion;
 	private String responsable;
+	private String secretaria;
+	private String recomendante;
+	private String antilavado;
+	private String tipoExpediente;
+	private String municipio;
+	private String actividad;
+	private String estatus;
+	private int instrumento;
+	private int volumen;
+	private int folioInicial;
+	private int folioFinal;
+	private String fechaElaboracion;
+	private String entregaEscritura;
+	private String revision;
+	private String apendice;
+	private String revisada;
+	private String fechaFirma;
+	private String fechaInstrumento;
 	
+	
+
+	public String getMunicipio() {
+		return municipio;
+	}
+	public void setMunicipio(String municipio) {
+		this.municipio = municipio;
+	}
+	public String getActividad() {
+		return actividad;
+	}
+	public void setActividad(String actividad) {
+		this.actividad = actividad;
+	}
+	public String getEstatus() {
+		return estatus;
+	}
+	public void setEstatus(String estatus) {
+		this.estatus = estatus;
+	}
 	public int getIdExpediente() {
 		return idExpediente;
 	}
@@ -61,7 +99,97 @@ public class Expediente {
 	public void setResponsable(String responsable) {
 		this.responsable = responsable;
 	}
-	
+	public String getSecretaria() {
+		return secretaria;
+	}
+	public void setSecretaria(String secretaria) {
+		this.secretaria = secretaria;
+	}
+	public String getRecomendante() {
+		return recomendante;
+	}
+	public void setRecomendante(String recomendante) {
+		this.recomendante = recomendante;
+	}
+	public String getAntilavado() {
+		return antilavado;
+	}
+	public void setAntilavado(String antilavado) {
+		this.antilavado = antilavado;
+	}
+	public String getTipoExpediente() {
+		return tipoExpediente;
+	}
+	public void setTipoExpediente(String tipoExpediente) {
+		this.tipoExpediente = tipoExpediente;
+	}
+	public int getInstrumento() {
+		return instrumento;
+	}
+	public void setInstrumento(int instrumento) {
+		this.instrumento = instrumento;
+	}
+	public int getVolumen() {
+		return volumen;
+	}
+	public void setVolumen(int volumen) {
+		this.volumen = volumen;
+	}
+	public int getFolioInicial() {
+		return folioInicial;
+	}
+	public void setFolioInicial(int folioInicial) {
+		this.folioInicial = folioInicial;
+	}
+	public int getFolioFinal() {
+		return folioFinal;
+	}
+	public void setFolioFinal(int folioFinal) {
+		this.folioFinal = folioFinal;
+	}
+	public String getFechaElaboracion() {
+		return fechaElaboracion;
+	}
+	public void setFechaElaboracion(String fechaElaboracion) {
+		this.fechaElaboracion = fechaElaboracion;
+	}
+	public String getEntregaEscritura() {
+		return entregaEscritura;
+	}
+	public void setEntregaEscritura(String entregaEscritura) {
+		this.entregaEscritura = entregaEscritura;
+	}
+	public String getRevision() {
+		return revision;
+	}
+	public void setRevision(String revision) {
+		this.revision = revision;
+	}
+	public String getApendice() {
+		return apendice;
+	}
+	public void setApendice(String apendice) {
+		this.apendice = apendice;
+	}
+	public String getRevisada() {
+		return revisada;
+	}
+	public void setRevisada(String revisada) {
+		this.revisada = revisada;
+	}
+	public String getFechaFirma() {
+		return fechaFirma;
+	}
+	public void setFechaFirma(String fechaFirma) {
+		this.fechaFirma = fechaFirma;
+	}
+	public String getFechaInstrumento() {
+		return fechaInstrumento;
+	}
+	public void setFechaInstrumento(String fechaInstrumento) {
+		this.fechaInstrumento = fechaInstrumento;
+	}
+
 	
 	
 	

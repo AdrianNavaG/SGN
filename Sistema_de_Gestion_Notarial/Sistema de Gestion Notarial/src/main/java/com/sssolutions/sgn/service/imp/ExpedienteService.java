@@ -1,5 +1,7 @@
 package com.sssolutions.sgn.service.imp;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -19,6 +21,14 @@ public class ExpedienteService implements IExpedienteService {
 		int save = expedienteRepository.saveExpedient(expediente);
 		
 		return save;
+	}
+
+	@Override
+	public List<Expediente> searchExpedient(Expediente expediente) {
+
+		List<Expediente> expedienteDaoResponse =  expedienteRepository.searchExpedient(expediente);
+		
+		return expedienteDaoResponse;
 	}
 
 }
