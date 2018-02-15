@@ -32,6 +32,8 @@ public class ExpedientController {
 			@RequestParam("secretaria") String secretaria,
 			@RequestParam("recomendante") String recomendante,
 			@RequestParam("antilavado") String antilavado,
+			@RequestParam("vulnerable") String vulnerable,
+			@RequestParam("nopaso") String nopaso,
 			@RequestParam("tipoExpediente") String tipoExpediente,
 			@RequestParam("municipio") String municipio,
 			@RequestParam("actividad") String actividad,
@@ -46,7 +48,9 @@ public class ExpedientController {
 			@RequestParam("apendice") String apendice,
 			@RequestParam("revisada") String revisada,
 			@RequestParam("fechaFirma") String fechaFirma,
-			@RequestParam("fechaInstrumento") String fechaInstrumento
+			@RequestParam("fechaInstrumento") String fechaInstrumento,
+			@RequestParam("fid") String fid,
+			@RequestParam("observaciones") String observaciones
 			
 			
 			){
@@ -62,6 +66,8 @@ public class ExpedientController {
 	    expedienteDao.setSecretaria(secretaria);
 	    expedienteDao.setRecomendante(recomendante);
 	    expedienteDao.setAntilavado(antilavado);
+	    expedienteDao.setVulnerable(vulnerable);
+	    expedienteDao.setNopaso(nopaso);
 	    expedienteDao.setTipoExpediente(tipoExpediente);
 	    expedienteDao.setMunicipio(municipio);
 	    expedienteDao.setActividad(actividad);
@@ -77,6 +83,8 @@ public class ExpedientController {
 	    expedienteDao.setRevisada(Util.dateConvert(revisada));
 	    expedienteDao.setFechaFirma(Util.dateConvert(fechaFirma));
 	    expedienteDao.setFechaInstrumento(Util.dateConvert(fechaInstrumento));
+	    expedienteDao.setFid(fid);
+	    expedienteDao.setObservaciones(observaciones);
 		
 		int save = expedienteService.saveExpedient(expedienteDao);
 		 
@@ -93,14 +101,18 @@ public class ExpedientController {
 	
 	@PostMapping("/search")
 	@ResponseBody 
-	public List<Expediente> searchExpedient(@RequestParam("expediente") String expediente,
-			@RequestParam("fechaApertura") String fechaApertura
+	public List<Expediente> searchExpedient(@RequestParam("expediente") String expediente
+//			@RequestParam("fechaApertura") String fechaApertura,
+//			@RequestParam("nss") String nss,
+//			@RequestParam("otorgante") String otorgante
+			
 			){
 				
 	    Expediente expedienteDao = new Expediente();
 	    expedienteDao.setExpediente(expediente);
-	    expedienteDao.setFecha(fechaApertura);
-	    
+//	    expedienteDao.setFecha(fechaApertura);
+//	    expedienteDao.setNss(nss);
+//	    expedienteDao.setOtorgante(otorgante);
 	    
 	    List<Expediente> expedienteDaoResponse = expedienteService.searchExpedient(expedienteDao);
 		

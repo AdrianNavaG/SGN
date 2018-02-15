@@ -82,6 +82,12 @@
 			<optional>true</optional>
 		</dependency>
 
+		  <!-- reportes -->
+<!-- 		<dependency> -->
+<!-- 		    <groupId>ar.com.fdvs</groupId> -->
+<!-- 		    <artifactId>DynamicJasper</artifactId> -->
+<!-- 		    <version>5.0.10</version> -->
+<!-- 		</dependency> -->
 
 
 <!-- 		<dependency> -->

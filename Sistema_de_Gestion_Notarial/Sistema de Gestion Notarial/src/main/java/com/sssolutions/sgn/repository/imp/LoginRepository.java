@@ -12,7 +12,6 @@ import com.sssolutions.sgn.dao.User;
 import com.sssolutions.sgn.repository.ILoginRepository;
 
 
-
 @Repository
 public class LoginRepository implements ILoginRepository {
 

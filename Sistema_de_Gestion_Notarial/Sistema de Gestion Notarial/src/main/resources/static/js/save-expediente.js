@@ -12,6 +12,8 @@ function saveexpedient(){
 	var secretaria = $('#secretaria').val();
 	var recomendante = $('#recomendante').val();
 	var antilavado = 0;
+	var vulnerable = 0;
+	var nopaso = 0;
 	var tipoExpediente = $('#tipo_expediente').val();
 	var municipio = $('#municipio').val();
 	var actividad = $('#actividad').val();
@@ -27,11 +29,20 @@ function saveexpedient(){
 	var revisada = $('#revisada').val();
 	var fechaFirma = $('#fecha_firma').val();
 	var fechaInstrumento = $('#fecha_instrumento').val();
+	var fid = $('#fid').val();
+	var observaciones = $('#observaciones').val();
 
 
 	if ($('#antilavado').is(':checked') ) {
 		antilavado =1;
 	}
+	if ($('#vulnerable').is(':checked') ) {
+		vulnerable =1;
+	}
+	if ($('#nopaso').is(':checked') ) {
+		nopaso =1;
+	}
+	
 
 
 	$.ajax({
@@ -48,6 +59,8 @@ function saveexpedient(){
 			secretaria:secretaria,
 			recomendante:recomendante,
 			antilavado:antilavado,
+			vulnerable:vulnerable,
+			nopaso:nopaso,
 			tipoExpediente:tipoExpediente,
 			municipio:municipio,
 			actividad:actividad,
@@ -62,7 +75,9 @@ function saveexpedient(){
 			apendice:apendice,
 			revisada:revisada,
 			fechaFirma:fechaFirma,
-			fechaInstrumento:fechaInstrumento
+			fechaInstrumento:fechaInstrumento,
+			fid:fid,
+			observaciones:observaciones
 
 		},
 		success: function(response){

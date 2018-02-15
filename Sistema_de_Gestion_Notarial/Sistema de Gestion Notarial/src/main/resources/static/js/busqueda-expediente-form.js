@@ -15,68 +15,84 @@ function busquedaexpediente(){
 							"<input type='text' id='expediente' name='expediente'"+
 								"class='form-control' placeholder='Expediente' >"+
 						"</div>"+
-						"<div class='form-group col-xs-10 col-sm-4 col-md-4 col-lg-4'>"+
-						"</div>"+
-						"<div class='form-group col-xs-10 col-sm-4 col-md-4 col-lg-4'>"+
-							"<label for='fecha_apertura' class=' form-control-label'>Fecha "+
-								"de Apertura</label> <input type='date' pattern='dd/mm/yyyy' id='fecha_apertura'"+
-							" class='form-control'>"+
-						"</div>"+
-						"<div class='form-group col-xs-10 col-sm-4 col-md-4 col-lg-4'>"+
-							"<label for='nss' class=' form-control-label'>Numero de"+
-								" Seguro Social *</label> <input type='text' id='nss'"+
-								"placeholder='Numero de seguro social' class='form-control'>"+
-						"</div>"+
-						"<div class='form-group col-xs-10 col-sm-4 col-md-4 col-lg-4'>"+
-						"<label for='secretaria' class=' form-control-label'>Secretaria</label>"+
-						"<input type='text' id='secretaria'"+
-							"placeholder='Ingresa Secretaria' class='form-control'>"+
-					    "</div>"+
-						"<div class='form-group col-xs-10 col-sm-4 col-md-4 col-lg-4'>"+
-						"<label for='fecha_elaboracion' class=' form-control-label'>Fecha Elaboracion</label>"+
-						"<input type='date' pattern='dd/mm/yyyy' id='fecha_elaboracion'"+
-							" class='form-control'>"+
-					    "</div>"+
-						"<div class='form-group col-xs-10 col-sm-4 col-md-4 col-lg-4'>"+
-							"<br>"+
-						"</div>"+
+//						"<div class='form-group col-xs-10 col-sm-4 col-md-4 col-lg-4'>"+
+//						"</div>"+
+//						"<div class='form-group col-xs-10 col-sm-4 col-md-4 col-lg-4'>"+
+//							"<label for='fecha_apertura' class=' form-control-label'>Fecha "+
+//								"de Apertura</label> <input type='date' pattern='dd/mm/yyyy' id='fecha_apertura'"+
+//							" class='form-control'>"+
+//						"</div>"+
+//						"<div class='form-group col-xs-10 col-sm-4 col-md-4 col-lg-4'>"+
+//							"<label for='nss' class=' form-control-label'>Numero de"+
+//								" Seguro Social *</label> <input type='text' id='nss'"+
+//								"placeholder='Numero de seguro social' class='form-control'>"+
+//						"</div>"+
+//						"<div class='form-group col-xs-10 col-sm-4 col-md-4 col-lg-4'>"+
+//						"<label for='secretaria' class=' form-control-label'>Secretaria</label>"+
+//						"<input type='text' id='secretaria'"+
+//							"placeholder='Ingresa Secretaria' class='form-control'>"+
+//					    "</div>"+
+//						"<div class='form-group col-xs-10 col-sm-4 col-md-4 col-lg-4'>"+
+//						"<label for='fecha_elaboracion' class=' form-control-label'>Fecha Elaboracion</label>"+
+//						"<input type='date' pattern='dd/mm/yyyy' id='fecha_elaboracion'"+
+//							" class='form-control'>"+
+//					    "</div>"+
 						"<div class='form-group col-xs-10 col-sm-4 col-md-4 col-lg-4'>"+
 							"<br>"+
 						"</div>"+
-						"<div 	class='form-group col-xs-10 col-sm-4 col-md-4 col-lg-4 text-right'>"+
+						"<div class='form-group col-xs-10 col-sm-4 col-md-4 col-lg-4'>"+
+							"<br>"+
+						"</div>"+
+						"<div class='form-group col-xs-10 col-sm-4 col-md-4 col-lg-4 text-right'>"+
 							"<button type='button' class='btn btn-outline-primary btn-sm' onclick='searchexpedient()'>"+
 								"<i class='fa fa-search-plus'> </i>&nbsp; Buscar"+
 							"</button>"+
 						"</div>"+
 					"</div>"+
-				"</form><hr>"+
+				"</form>"+
+				 
+				"<div class='card-body'><hr>" +
 				
-				"<table id='bootstrap-data-table' class='table table-striped table-bordered'>"+
+
+				"<table id='tableexpediente' class='table table-striped table-bordered'>"+
                    "<thead>"+
                     "<tr>"+
-                       "<th>Name</th>"+
-                       "<th>Position</th>"+
-                       "<th>Office</th>"+
-                       "<th>Salary</th>"+
+                       "<th>Expediente</th>"+
+                       "<th>Fecha</th>"+
+                       "<th>NSS</th>"+
+                       "<th>Otorgante</th>"+
+                       "<th>Boton</th>"+
+//                       "<th>Recomendante</th>"+
+//                       "<th>Fecha de apertura</th>"+
                       "</tr>"+
                     "</thead>"+
                     "<tbody>"+
-                      "<tr>"+
-                        "<td>Tiger Nixon</td>"+
-                        "<td>System Architect</td>"+
-                        "<td>Edinburgh</td>"+
-                        "<td>$320,800</td>"+
-                      "</tr>"+
+//                      "<tr>"+
+//                      
+//                        "<td>Tiger Nixon</td>"+
+//                        "<td>System Architect</td>"+
+//                        "<td>Edinburgh</td>"+
+//                        "<td>$320,800</td>"+
+//                        "<td>$320,800</td>"+
+//                        "<td>$320,800</td>"+
+//                      "</tr>"+
                       "<tbody>"+
                       "</table>"+
-				
+                      "</div>"+
+                      			
 			"</div>"+
 		"</div>"+
 	"</div>"+
 "</div>");
 	
-	
-	
-
+//   aux();
 
 }
+
+
+
+//function aux(){
+//	alert($('#bootstrap-data-table-export'));
+//     $('#bootstrap-data-table-export').DataTable();
+//}
+

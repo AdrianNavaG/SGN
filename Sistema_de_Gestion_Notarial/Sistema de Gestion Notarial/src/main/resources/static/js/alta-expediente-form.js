@@ -57,19 +57,6 @@ function altaexpediente(){
 						"<input type='text' id='recomendante'"+
 							"placeholder='Ingresa Recomendante' class='form-control'>"+
 					    "</div>"+
-					    
-					    
-						"<div class='form-group col-xs-10 col-sm-4 col-md-4 col-lg-4'>"+
-						"<div>"+
-						"<label for ='antilavado' class='form-control-label'> Anti-Lavado </label>"+
-						"</div>"+
-						//"<label class='switch switch-3d switch-info mr-3'>"+
-						"<input type='checkbox' value='' id='antilavado' align='left'>"+
-						//"<span class='switch-label'></span>" +
-						//"<span class='switch-handle'></span>"+
-						"</label>"+
-					    "</div>"+
-					    
 						"<div class='form-group col-xs-10 col-sm-4 col-md-4 col-lg-4'>"+
 						"<label for='tipoexpediente' class=' form-control-label'>Tipo Expediente</label>"+
 						"<input type='text' id='tipo_expediente'"+
@@ -81,42 +68,66 @@ function altaexpediente(){
 							"placeholder='Ingresa Municipio' class='form-control'>"+
 					    "</div>"+
 						"<div class='form-group col-xs-10 col-sm-4 col-md-4 col-lg-4'>"+
+						"<div>"+
+						"<label for ='antilavado' class='form-control-label'> Anti-Lavado </label>"+
+						"</div>"+
+						//"<label class='switch switch-3d switch-info mr-3'>"+
+						"<input type='checkbox' value='' id='antilavado' align='left'>"+
+						//"<span class='switch-label'></span>" +
+						//"<span class='switch-handle'></span>"+
+						"</label>"+
+					    "</div>"+
+						"<div class='form-group col-xs-10 col-sm-4 col-md-4 col-lg-4'>"+
+						"<div>"+
+						"<label for ='vulnerable' class='form-control-label'> Vulnerable </label>"+
+						"</div>"+
+						"<input type='checkbox' value='' id='vulnerable' align='left'>"+
+						"</label>"+
+					    "</div>"+
+						"<div class='form-group col-xs-10 col-sm-4 col-md-4 col-lg-4'>"+
+						"<div>"+
+						"<label for ='nopaso' class='form-control-label'> NoPaso </label>"+
+						"</div>"+
+						"<input type='checkbox' value='' id='nopaso' align='left'>"+
+						"</label>"+
+					    "</div>"+
+						"<div class='form-group col-xs-10 col-sm-4 col-md-4 col-lg-4'>"+
 						"<label for='actividad' class=' form-control-label'>Actividad</label>"+
 						"<input type='text' id='actividad'"+
 							"placeholder='Ingresa Actividad' class='form-control'>"+
 					    "</div>"+
 						"<div class='form-group col-xs-10 col-sm-4 col-md-4 col-lg-4'>"+
-						"<label for='estatus' class=' form-control-label'>Estatus</label>"+
+						"<label for='estatus' class='form-control-label'>Estatus</label>"+
 						"<input type='text' id='estatus'"+
 							"placeholder='Ingresa Estatus' class='form-control'>"+
 					    "</div>"+
 						"<div class='form-group col-xs-10 col-sm-4 col-md-4 col-lg-4'>"+
-						"<label for='instrumento' class=' form-control-label'>Instrumento</label>"+
+						"<label for='instrumento' class='form-control-label'>Instrumento</label>"+
 						"<input type='number' min='0' id='instrumento'  onblur='validarNumero()' value='0'"+
 							"placeholder='Ingresa Instrumento' class='form-control'>"+
 					    "</div>"+
 						"<div class='form-group col-xs-10 col-sm-4 col-md-4 col-lg-4'>"+
-						"<label for='volumen' class=' form-control-label'>Volumen</label>"+
-						"<input type='text' id='volumen'"+
+						"<label for='volumen' class='form-control-label'>Volumen</label>"+
+						"<input type='number' value='0'id='volumen'"+
 							"placeholder='Ingresa Volumen' class='form-control'>"+
 					    "</div>"+
 						"<div class='form-group col-xs-10 col-sm-4 col-md-4 col-lg-4'>"+
-						"<label for='folio_inicial' class=' form-control-label'>Folio Inicial</label>"+
-						"<input type='text' id='folio_inicial'"+
+						"<label for='folio_inicial' class='form-control-label'>Folio Inicial</label>"+
+						"<input type='number' value='0' id='folio_inicial'"+
 							"placeholder='Ingresa Folio Inicial' class='form-control'>"+
 					    "</div>"+
 						"<div class='form-group col-xs-10 col-sm-4 col-md-4 col-lg-4'>"+
-						"<label for='folio_final' class=' form-control-label'>Folio Final</label>"+
-						"<input type='text' id='folio_final'"+
+						"<label for='folio_final' class='form-control-label'>Folio Final</label>"+
+						"<input type='number' value='0' id='folio_final'"+
 							"placeholder='Ingresa Folio Final' class='form-control'>"+
 					    "</div>"+
 						"<div class='form-group col-xs-10 col-sm-4 col-md-4 col-lg-4'>"+
-						"<label for='fecha_elaboracion' class=' form-control-label'>Fecha Elaboracion</label>"+
+						"<label for='fecha_elaboracion' class='form-control-label'>Fecha Elaboracion</label>"+
 						"<input type='date' pattern='dd/mm/yyyy' id='fecha_elaboracion'"+
 							" class='form-control'>"+
 					    "</div>"+
 						"<div class='form-group col-xs-10 col-sm-4 col-md-4 col-lg-4'>"+
-						"<label for='entrega_escritura' class=' form-control-label'>Entrega Escritura</label>"+
+						"<label for='entrega_escritura' class='form-control-label'>Entrega Escritura</label>"+
 						"<input type='date' pattern='dd/mm/yyyy' id='entrega_escritura'"+
 							" class='form-control'>"+
 					    "</div>"+
@@ -126,32 +137,42 @@ function altaexpediente(){
 							" class='form-control'>"+
 					    "</div>"+
 						"<div class='form-group col-xs-10 col-sm-4 col-md-4 col-lg-4'>"+
-						"<label for='apendice' class=' form-control-label'>Apendice</label>"+
+						"<label for='apendice' class='form-control-label'>Apendice</label>"+
 						"<input type='date' pattern='dd/mm/yyyy' id='apendice'"+
 							" class='form-control'>"+
 					    "</div>"+
 						"<div class='form-group col-xs-10 col-sm-4 col-md-4 col-lg-4'>"+
-						"<label for='revisada' class=' form-control-label'>Revisada</label>"+
+						"<label for='revisada' class='form-control-label'>Revisada</label>"+
 						"<input type='date' pattern='dd/mm/yyyy' id='revisada'"+
 							" class='form-control'>"+
 					    "</div>"+
 						"<div class='form-group col-xs-10 col-sm-4 col-md-4 col-lg-4'>"+
-						"<label for='fecha_firma' class=' form-control-label'>Fecha Firma</label>"+
+						"<label for='fecha_firma' class='form-control-label'>Fecha Firma</label>"+
 						"<input type='date' pattern='dd/mm/yyyy' id='fecha_firma'"+
 							" class='form-control'>"+
 					    "</div>"+
 						"<div class='form-group col-xs-10 col-sm-4 col-md-4 col-lg-4'>"+
-						"<label for='fecha_instrumento' class=' form-control-label'>Fecha Instrumento</label>"+
+						"<label for='fecha_instrumento' class='form-control-label'>Fecha Instrumento</label>"+
 						"<input type='date' pattern='dd/mm/yyyy' id='fecha_instrumento'"+
 							" class='form-control'>"+
+					    "</div>"+
+						"<div class='form-group col-xs-10 col-sm-4 col-md-4 col-lg-4'>"+
+						"<label for='fid' class='form-control-label'>FID</label>"+
+						"<input type='text' id='fid'"+
+							" class='form-control'>"+	
+						"<div class='row col-sm-12'>"+
+						"<label for='observaciones' class='form-control-label'>Observaciones</label>"+
+				        "<textarea id='observaciones' rows='6' cols='40'></textarea>"+
 					    "</div>"+
 						"<div class='form-group col-xs-10 col-sm-4 col-md-4 col-lg-4'>"+
 							"<br>"+
 						"</div>"+
 						"<div class='form-group col-xs-10 col-sm-4 col-md-4 col-lg-4'>"+
 							"<br>"+
-						"</div>"+
-						"<div 	class='form-group col-xs-10 col-sm-4 col-md-4 col-lg-4 text-right'>"+
+					    "</div>"+
+					    "</div>"+
+						    
+						"<div class='form-group col-xs-10 col-sm-4 col-md-4 col-lg-4 text-right'>"+
 							"<button type='button' class='btn btn-outline-primary btn-sm' onclick='saveexpedient()'>"+
 								"<i class='fa fa-save (alias)'> </i>&nbsp; Guardar"+
 							"</button>"+

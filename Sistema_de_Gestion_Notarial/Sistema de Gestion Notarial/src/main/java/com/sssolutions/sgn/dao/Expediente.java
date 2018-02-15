@@ -15,6 +15,8 @@ public class Expediente {
 	private String secretaria;
 	private String recomendante;
 	private String antilavado;
+	private String vulnerable;
+	private String nopaso;
 	private String tipoExpediente;
 	private String municipio;
 	private String actividad;
@@ -30,9 +32,20 @@ public class Expediente {
 	private String revisada;
 	private String fechaFirma;
 	private String fechaInstrumento;
-	
+	private String fid;
+	private String observaciones;
 	
 
+	public Expediente(String expediente, String fecha, String nss, String otorgante) {
+		this.expediente = expediente;
+		this.fecha = fecha;
+		this.nss = nss;
+		this.otorgante=otorgante;
+	}
+	
+	public Expediente() {
+
+	}
 	public String getMunicipio() {
 		return municipio;
 	}
@@ -117,6 +130,19 @@ public class Expediente {
 	public void setAntilavado(String antilavado) {
 		this.antilavado = antilavado;
 	}
+	
+	public String getVulnerable() {
+		return vulnerable;
+	}
+	public void setVulnerable(String vulnerable) {
+		this.vulnerable = vulnerable;
+	}
+	public String getNopaso() {
+		return nopaso;
+	}
+	public void setNopaso(String nopaso) {
+		this.nopaso = nopaso;
+	}
 	public String getTipoExpediente() {
 		return tipoExpediente;
 	}
@@ -189,8 +215,18 @@ public class Expediente {
 	public void setFechaInstrumento(String fechaInstrumento) {
 		this.fechaInstrumento = fechaInstrumento;
 	}
+	public String getFid() {
+		return fid;
+	}
+	public void setFid(String fid) {
+		this.fid = fid;
+	}
+	public String getObservaciones() {
+		return observaciones;
+	}
+	public void setObservaciones(String observaciones) {
+		this.observaciones = observaciones;
+	}
 
-	
-	
 	
 }

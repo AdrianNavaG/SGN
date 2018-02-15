@@ -1,8 +1,6 @@
-
 function validarNumero(){
-	
-var instrumento= $("#instrumento").val();
 
+var instrumento= $("#instrumento").val();
 
 if (instrumento.length == 0){
 

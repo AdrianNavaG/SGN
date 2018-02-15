@@ -34,6 +34,8 @@
      <script src="/resources/js/alta-expediente-validation.js"></script>
      
      <script src="/resources/js/busqueda-expediente-form.js"></script>
+     <script src="/resources/js/search-expediente.js"></script>
+     <script src="/resources/js/select-expediente.js"></script>
      
 
 </head>
@@ -150,18 +152,36 @@
 	          <p> <label id="labelModal"></label></p>
 	        </div>
 	        <div class="modal-footer">
-	          <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+	          <button type="button" class="btn btn-default" data-dismiss="modal">Aceptar</button>
 	        </div>
 	      </div>
 	    </div>
 	  </div>
 
 
+<!-- 	<table id='bootstrap-data-table' class='table table-striped table-bordered'> -->
+<!-- 	<thead id='data-table-thead'> -->
+<!--      </thead> -->
+<!--      <tbody id='data-table-tbody'> -->
+<!--      </tbody>      -->
+<!-- 	</table> -->
+
     <script src="/resources/assets/js/vendor/jquery-2.1.4.min.js"></script>
     <script src="/resources/assets/js/popper.min.js"></script>
     <script src="/resources/assets/js/plugins.js"></script>
     <script src="/resources/assets/js/main.js"></script>
-
+    
+     <script src="/resources/assets/js/lib/data-table/datatables.min.js"></script>
+    <script src="/resources/assets/js/lib/data-table/dataTables.bootstrap.min.js"></script>
+    <script src="/resources/assets/js/lib/data-table/dataTables.buttons.min.js"></script>
+    <script src="/resources/assets/js/lib/data-table/buttons.bootstrap.min.js"></script>
+    <script src="/resources/assets/js/lib/data-table/jszip.min.js"></script>
+    <script src="/resources/assets/js/lib/data-table/pdfmake.min.js"></script>
+    <script src="/resources/assets/js/lib/data-table/vfs_fonts.js"></script>
+    <script src="/resources/assets/js/lib/data-table/buttons.html5.min.js"></script>
+    <script src="/resources/assets/js/lib/data-table/buttons.print.min.js"></script>
+    <script src="/resources/assets/js/lib/data-table/buttons.colVis.min.js"></script>
+    <script src="/resources/assets/js/lib/data-table/datatables-init.js"></script>
 
 </body>
 </html>
