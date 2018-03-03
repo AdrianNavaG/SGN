@@ -10,13 +10,16 @@ function altaexpediente(){
 					"</div>"+
 					"<div class='card-body card-block'>"+
 					"<h6>Los campos marcados con asterisco (*) son obligatorios.</h6><br>"+
+					
 						"<div class='form-group col-xs-10 col-sm-4 col-md-4 col-lg-4'>"+
 							"<label for='expediente' class=' form-control-label'>Expediente</label>"+
 							"<input type='text' id='expediente' name='expediente'"+
 								"class='form-control' placeholder='Nuevo' readonly>"+
 						"</div>"+
+						
 						"<div class='form-group col-xs-10 col-sm-4 col-md-4 col-lg-4'>"+
 						"</div>"+
+						
 						"<div class='form-group col-xs-10 col-sm-4 col-md-4 col-lg-4'>"+
 							"<label for='fecha_apertura' class=' form-control-label'>Fecha "+
 								"de Apertura</label> <input type='text' id='fecha_apertura'"+

@@ -37,6 +37,12 @@
      <script src="/resources/js/search-expediente.js"></script>
      <script src="/resources/js/select-expediente.js"></script>
      
+     <script src="/resources/js/alta-cliente-form.js"></script>
+     <script src="/resources/js/save-client.js"></script>
+     
+     <script src="/resources/js/busqueda-cliente-form.js"></script>
+     <script src="/resources/js/search-cliente.js"></script>
+     
 
 </head>
 <body>
@@ -73,8 +79,8 @@
                     <li class="menu-item-has-children dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-users"></i>Clientes</a>
                         <ul class="sub-menu children dropdown-menu">
-                            <li><i class="fa fa-table"></i><a href="#">Basic Table</a></li>
-                            <li><i class="fa fa-table"></i><a href="#">Data Table</a></li>
+                            <li><i class="fa fa-folder-open-o"></i><a onClick="altacliente()" href="#">Alta de Clientes</a></li>
+                            <li><i class="fa fa-search"></i><a onClick="busquedacliente()" href="#">Busqueda de Clientes</a></li>
                         </ul>
                     </li>
                     <li class="menu-item-has-children dropdown">

@@ -119,4 +119,19 @@ public class ExpedientController {
 		return expedienteDaoResponse;
 	}
 	
+	@PostMapping("/rewrite")
+	@ResponseBody 
+	public int rewriteExpedient(@RequestParam("expediente") String expediente,
+			@RequestParam("credito") String credito) {
+		
+		  Expediente expedienteDao = new Expediente();
+		    expedienteDao.setExpediente(expediente);
+		    expedienteDao.setCredito(credito);
+		    
+		    int save = expedienteService.rewriteExpedient(expedienteDao);
+			 
+		
+		return save;
+	}
+	
 }

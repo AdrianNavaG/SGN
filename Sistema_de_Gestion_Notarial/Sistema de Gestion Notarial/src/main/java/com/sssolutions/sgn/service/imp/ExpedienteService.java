@@ -30,5 +30,14 @@ public class ExpedienteService implements IExpedienteService {
 		
 		return expedienteDaoResponse;
 	}
+	
+	@Override
+	public int rewriteExpedient(Expediente expediente) {
+	
+		int save = expedienteRepository.rewriteExpedient(expediente);
+				
+		
+		return save;
+	}
 
 }

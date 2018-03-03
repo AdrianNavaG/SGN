@@ -14,13 +14,11 @@ public class Expediente {
 	private String responsable;
 	private String secretaria;
 	private String recomendante;
-	private String antilavado;
-	private String vulnerable;
-	private String nopaso;
 	private String tipoExpediente;
 	private String municipio;
 	private String actividad;
 	private String estatus;
+	private String antilavado;
 	private int instrumento;
 	private int volumen;
 	private int folioInicial;
@@ -32,17 +30,51 @@ public class Expediente {
 	private String revisada;
 	private String fechaFirma;
 	private String fechaInstrumento;
+	private String vulnerable;
+	private String nopaso;
 	private String fid;
 	private String observaciones;
 	
+	
 
-	public Expediente(String expediente, String fecha, String nss, String otorgante) {
+	public Expediente(int idExpediente, String expediente, String fecha, String nss, String credito, String otorgante,
+			String operacion, String responsable, String secretaria, String recomendante, String tipoExpediente,
+			String municipio, String actividad, String estatus, String antilavado, int instrumento, int volumen,
+			int folioInicial, int folioFinal, String fechaElaboracion, String entregaEscritura, String revision,
+			String apendice, String revisada, String fechaFirma, String fechaInstrumento, String vulnerable,
+			String nopaso, String fid, String observaciones) {
+		super();
+		this.idExpediente = idExpediente;
 		this.expediente = expediente;
 		this.fecha = fecha;
 		this.nss = nss;
-		this.otorgante=otorgante;
+		this.credito = credito;
+		this.otorgante = otorgante;
+		this.operacion = operacion;
+		this.responsable = responsable;
+		this.secretaria = secretaria;
+		this.recomendante = recomendante;
+		this.tipoExpediente = tipoExpediente;//10
+		this.municipio = municipio;
+		this.actividad = actividad; //12
+		this.estatus = estatus;
+		this.antilavado = antilavado;//14
+		this.instrumento = instrumento;
+		this.volumen = volumen;
+		this.folioInicial = folioInicial;
+		this.folioFinal = folioFinal;
+		this.fechaElaboracion = fechaElaboracion;
+		this.entregaEscritura = entregaEscritura;
+		this.revision = revision;
+		this.apendice = apendice;
+		this.revisada = revisada;
+		this.fechaFirma = fechaFirma;
+		this.fechaInstrumento = fechaInstrumento;
+		this.vulnerable = vulnerable;
+		this.nopaso = nopaso;
+		this.fid = fid;
+		this.observaciones = observaciones;
 	}
-	
 	public Expediente() {
 
 	}

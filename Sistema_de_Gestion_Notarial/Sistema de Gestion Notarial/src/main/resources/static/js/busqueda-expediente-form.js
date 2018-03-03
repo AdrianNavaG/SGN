@@ -59,7 +59,7 @@ function busquedaexpediente(){
                     "<tr>"+
                        "<th>Expediente</th>"+
                        "<th>Fecha</th>"+
-                       "<th>NSS</th>"+
+                       "<th>Secretaria</th>"+
                        "<th>Otorgante</th>"+
                        "<th>Boton</th>"+
 //                       "<th>Recomendante</th>"+

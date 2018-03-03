@@ -2,18 +2,13 @@
 function searchexpedient(){
 	
 	var expediente = $('#expediente').val();
-//	var fechaApertura = $('#fecha_apertura').val();
-//	var nss = $('#nss').val();;
-//	var secretaria = $('#secretaria').val();
-//	var fechaElaboracion = $('#fecha_elaboracion').val();
 
 	$.ajax({
 		type: "POST",
 		url: "expediente/search", 
 		data:{ 
 			expediente:expediente
-//			fechaApertura:fechaApertura,
-		
+
 		},
 		success: function(response){
 			
@@ -23,9 +18,10 @@ function searchexpedient(){
 				for (i=0; i< response.length; i++){
 
 					var recursiveEncoded = $.param( response[i] );
+
 					$('#tableexpediente tr:last').after("<tr><td>" + response[i].expediente +
-					"</td>"+"<td>" + response[i].fecha + "</td>"+
-					"</td>"+"<td>" + response[i].nss + "</td>"+
+					"</td>"+"<td>" + response[i].fecha.substring(0,10) + "</td>"+
+					"</td>"+"<td>" + response[i].secretaria + "</td>"+
 					"</td>"+"<td>" + response[i].otorgante + "</td>" +
 					"<td></div>"+
 					"<div class='form-group col-xs-10 col-sm-4 col-md-4 col-lg-4 text-right'>" +
@@ -45,14 +41,6 @@ function searchexpedient(){
 
 			$( "#modalAlert" ).trigger( "click" );
 			
-			
-
-//			for (i=0; i< response.length; i++){
-//				alert(response[i].expediente);
-//				alert(response[i].fecha);
-//				alert(response[i].nss);
-//				alert(response[i].otorgante);
-//			}
 		}
 	});
 
@@ -66,11 +54,6 @@ function selectexpedient(expediente){
 //	    console.log("val1: "+expedienteArrayAux[0]);
 //	    console.log("val2: "+expedienteArrayAux[1]);
 	    expedienteArrayFinal[i]=expedienteArrayAux[1];
-	}
-	
-	
-	for (i = 0; i < expedienteArrayFinal.length; i++) { 
-	   alert(expedienteArrayFinal[i]);
 	}
 	
 	$('#contenedor').html("<div id='alta-expediente-div'>"+
@@ -93,59 +76,59 @@ function selectexpedient(expediente){
 								"<div class='form-group col-xs-10 col-sm-4 col-md-4 col-lg-4'>"+
 									"<label for='fecha_apertura' class=' form-control-label'>Fecha "+
 										"de Apertura</label> <input type='text' id='fecha_apertura'"+
-										"class='form-control' value='"+$("#today").val()+"' readonly>"+
+										"class='form-control' value='"+expedienteArrayFinal[2].substring(0,10)+"' readonly>"+
 								"</div>"+
 								"<div class='form-group col-xs-10 col-sm-4 col-md-4 col-lg-4'>"+
 									"<label for='nss' class=' form-control-label'>Numero de"+
 										" Seguro Social *</label> <input type='text' id='nss'"+
-										"placeholder='Numero de seguro social' class='form-control'>"+
+										"placeholder='Numero de seguro social' class='form-control' value='"+expedienteArrayFinal[3].replace(/[+]/g,' ')+"' >"+
 								"</div>"+
 								"<div class='form-group col-xs-10 col-sm-4 col-md-4 col-lg-4'>"+
 									"<label for='credito' class='form-control-label'>Cr&eacutedito</label>"+
-										"<input type='text' id='credito' placeholder='Ingresa Credito'"+
+										"<input type='text' id='credito' placeholder='Ingresa Credito' value='"+expedienteArrayFinal[4].replace(/[+]/g,' ')+"' "+
 										"class='form-control'>"+
 								"</div>"+
 								"<div class='form-group col-xs-10 col-sm-4 col-md-4 col-lg-4'>"+
 									"<label for='otorgante' class=' form-control-label'>Otorgante</label>"+
-									"<input type='text' id='otorgante' placeholder='Ingresa Otorgante'"+
+									"<input type='text' id='otorgante' placeholder='Ingresa Otorgante' value='"+expedienteArrayFinal[5].replace(/[+]/g,' ')+"'"+
 										"class='form-control'>"+
 								"</div>"+
 								"<div class='form-group col-xs-10 col-sm-4 col-md-4 col-lg-4'>"+
 									"<label for='operacion' class=' form-control-label'>Operaci&oacuten</label>"+
-									"<input type='text' id='operacion' placeholder='Ingresa Operacion'"+
+									"<input type='text' id='operacion' placeholder='Ingresa Operacion' value='"+expedienteArrayFinal[6].replace(/[+]/g,' ')+"'"+
 										"class='form-control'>"+
 								"</div>"+
 								"<div class='form-group col-xs-10 col-sm-4 col-md-4 col-lg-4'>"+
 									"<label for='responsable' class=' form-control-label'>Responsable</label>"+
 									"<input type='text' id='responsable'"+
-										"placeholder='Ingresa Responsable' class='form-control'>"+
+										"placeholder='Ingresa Responsable' value='"+expedienteArrayFinal[7].replace(/[+]/g,' ')+"' class='form-control'>"+
 								"</div>"+
 								"<div class='form-group col-xs-10 col-sm-4 col-md-4 col-lg-4'>"+
 								"<label for='secretaria' class=' form-control-label'>Secretaria</label>"+
 								"<input type='text' id='secretaria'"+
-									"placeholder='Ingresa Secretaria' class='form-control'>"+
+									"placeholder='Ingresa Secretaria' value='"+expedienteArrayFinal[8].replace(/[+]/g,' ')+"' class='form-control'>"+
 							    "</div>"+
 								"<div class='form-group col-xs-10 col-sm-4 col-md-4 col-lg-4'>"+
 								"<label for='recomendante' class=' form-control-label'>Recomendante</label>"+
 								"<input type='text' id='recomendante'"+
-									"placeholder='Ingresa Recomendante' class='form-control'>"+
+									"placeholder='Ingresa Recomendante' value='"+expedienteArrayFinal[9].replace(/[+]/g,' ')+"' class='form-control'>"+
 							    "</div>"+
 								"<div class='form-group col-xs-10 col-sm-4 col-md-4 col-lg-4'>"+
 								"<label for='tipoexpediente' class=' form-control-label'>Tipo Expediente</label>"+
 								"<input type='text' id='tipo_expediente'"+
-									"placeholder='Ingresa Tipo de Expediente' class='form-control'>"+
+									"placeholder='Ingresa Tipo de Expediente' value='"+expedienteArrayFinal[10].replace(/[+]/g,' ')+"' class='form-control'>"+
 							    "</div>"+
 								"<div class='form-group col-xs-10 col-sm-4 col-md-4 col-lg-4'>"+
 								"<label for='municipio' class=' form-control-label'>Municipio</label>"+
 								"<input type='text' id='municipio'"+
-									"placeholder='Ingresa Municipio' class='form-control'>"+
+									"placeholder='Ingresa Municipio' value='"+expedienteArrayFinal[11].replace(/[+]/g,' ')+"' class='form-control'>"+
 							    "</div>"+
 								"<div class='form-group col-xs-10 col-sm-4 col-md-4 col-lg-4'>"+
 								"<div>"+
 								"<label for ='antilavado' class='form-control-label'> Anti-Lavado </label>"+
 								"</div>"+
 								//"<label class='switch switch-3d switch-info mr-3'>"+
-								"<input type='checkbox' value='' id='antilavado' align='left'>"+
+								"<input type='checkbox' value='' id='antilavado' align='left' >"+
 								//"<span class='switch-label'></span>" +
 								//"<span class='switch-handle'></span>"+
 								"</label>"+
@@ -154,7 +137,7 @@ function selectexpedient(expediente){
 								"<div>"+
 								"<label for ='vulnerable' class='form-control-label'> Vulnerable </label>"+
 								"</div>"+
-								"<input type='checkbox' value='' id='vulnerable' align='left'>"+
+								"<input type='checkbox' value='' id='vulnerable'  align='left' >"+
 								"</label>"+
 							    "</div>"+
 								"<div class='form-group col-xs-10 col-sm-4 col-md-4 col-lg-4'>"+
@@ -167,75 +150,75 @@ function selectexpedient(expediente){
 								"<div class='form-group col-xs-10 col-sm-4 col-md-4 col-lg-4'>"+
 								"<label for='actividad' class=' form-control-label'>Actividad</label>"+
 								"<input type='text' id='actividad'"+
-									"placeholder='Ingresa Actividad' class='form-control'>"+
+									"placeholder='Ingresa Actividad' value='"+expedienteArrayFinal[12].replace(/[+]/g,' ')+"' class='form-control'>"+
 							    "</div>"+
 								"<div class='form-group col-xs-10 col-sm-4 col-md-4 col-lg-4'>"+
 								"<label for='estatus' class='form-control-label'>Estatus</label>"+
 								"<input type='text' id='estatus'"+
-									"placeholder='Ingresa Estatus' class='form-control'>"+
+									"placeholder='Ingresa Estatus' value='"+expedienteArrayFinal[13].replace(/[+]/g,' ')+"' class='form-control'>"+
 							    "</div>"+
 								"<div class='form-group col-xs-10 col-sm-4 col-md-4 col-lg-4'>"+
 								"<label for='instrumento' class='form-control-label'>Instrumento</label>"+
-								"<input type='number' min='0' id='instrumento'  onblur='validarNumero()' value='0'"+
-									"placeholder='Ingresa Instrumento' class='form-control'>"+
+								"<input type='number' min='0' id='instrumento'  onblur='validarNumero()'"+
+									"placeholder='Ingresa Instrumento' value='"+expedienteArrayFinal[15]+"' class='form-control'>"+
 							    "</div>"+
 								"<div class='form-group col-xs-10 col-sm-4 col-md-4 col-lg-4'>"+
 								"<label for='volumen' class='form-control-label'>Volumen</label>"+
-								"<input type='number' value='0'id='volumen'"+
-									"placeholder='Ingresa Volumen' class='form-control'>"+
+								"<input type='number' value='"+expedienteArrayFinal[16]+"' id='volumen'"+
+									"placeholder='Ingresa Volumen'  class='form-control'>"+
 							    "</div>"+
 								"<div class='form-group col-xs-10 col-sm-4 col-md-4 col-lg-4'>"+
 								"<label for='folio_inicial' class='form-control-label'>Folio Inicial</label>"+
-								"<input type='number' value='0' id='folio_inicial'"+
-									"placeholder='Ingresa Folio Inicial' class='form-control'>"+
+								"<input type='number' value='"+expedienteArrayFinal[17]+"' id='folio_inicial'"+
+									"placeholder='Ingresa Folio Inicial'  class='form-control'>"+
 							    "</div>"+
 								"<div class='form-group col-xs-10 col-sm-4 col-md-4 col-lg-4'>"+
 								"<label for='folio_final' class='form-control-label'>Folio Final</label>"+
-								"<input type='number' value='0' id='folio_final'"+
+								"<input type='number' value='"+expedienteArrayFinal[18]+"' id='folio_final'"+
 									"placeholder='Ingresa Folio Final' class='form-control'>"+
 							    "</div>"+
 								"<div class='form-group col-xs-10 col-sm-4 col-md-4 col-lg-4'>"+
 								"<label for='fecha_elaboracion' class='form-control-label'>Fecha Elaboracion</label>"+
-								"<input type='date' pattern='dd/mm/yyyy' id='fecha_elaboracion'"+
+								"<input type='date' pattern='dd/mm/yyyy' id='fecha_elaboracion' value='"+expedienteArrayFinal[19].substring(0,10)+"' "+
 									" class='form-control'>"+
 							    "</div>"+
 								"<div class='form-group col-xs-10 col-sm-4 col-md-4 col-lg-4'>"+
 								"<label for='entrega_escritura' class='form-control-label'>Entrega Escritura</label>"+
-								"<input type='date' pattern='dd/mm/yyyy' id='entrega_escritura'"+
+								"<input type='date' pattern='dd/mm/yyyy' id='entrega_escritura' value='"+expedienteArrayFinal[20].substring(0,10)+"'"+
 									" class='form-control'>"+
 							    "</div>"+
 								"<div class='form-group col-xs-10 col-sm-4 col-md-4 col-lg-4'>"+
 								"<label for='revision' class=' form-control-label'>Revision</label>"+
-								"<input type='date' pattern='dd/mm/yyyy' id='revision'"+
+								"<input type='date' pattern='dd/mm/yyyy' id='revision' value='"+expedienteArrayFinal[21].substring(0,10)+"'"+
 									" class='form-control'>"+
 							    "</div>"+
 								"<div class='form-group col-xs-10 col-sm-4 col-md-4 col-lg-4'>"+
 								"<label for='apendice' class='form-control-label'>Apendice</label>"+
-								"<input type='date' pattern='dd/mm/yyyy' id='apendice'"+
+								"<input type='date' pattern='dd/mm/yyyy' id='apendice' value='"+expedienteArrayFinal[22].substring(0,10)+"'"+
 									" class='form-control'>"+
 							    "</div>"+
 								"<div class='form-group col-xs-10 col-sm-4 col-md-4 col-lg-4'>"+
 								"<label for='revisada' class='form-control-label'>Revisada</label>"+
-								"<input type='date' pattern='dd/mm/yyyy' id='revisada'"+
+								"<input type='date' pattern='dd/mm/yyyy' id='revisada' value='"+expedienteArrayFinal[23].substring(0,10)+"'"+
 									" class='form-control'>"+
 							    "</div>"+
 								"<div class='form-group col-xs-10 col-sm-4 col-md-4 col-lg-4'>"+
 								"<label for='fecha_firma' class='form-control-label'>Fecha Firma</label>"+
-								"<input type='date' pattern='dd/mm/yyyy' id='fecha_firma'"+
+								"<input type='date' pattern='dd/mm/yyyy' id='fecha_firma' value='"+expedienteArrayFinal[24].substring(0,10)+"'"+
 									" class='form-control'>"+
 							    "</div>"+
 								"<div class='form-group col-xs-10 col-sm-4 col-md-4 col-lg-4'>"+
 								"<label for='fecha_instrumento' class='form-control-label'>Fecha Instrumento</label>"+
-								"<input type='date' pattern='dd/mm/yyyy' id='fecha_instrumento'"+
+								"<input type='date' pattern='dd/mm/yyyy' id='fecha_instrumento' value='"+expedienteArrayFinal[25].substring(0,10)+"'"+
 									" class='form-control'>"+
 							    "</div>"+
 								"<div class='form-group col-xs-10 col-sm-4 col-md-4 col-lg-4'>"+
 								"<label for='fid' class='form-control-label'>FID</label>"+
-								"<input type='text' id='fid'"+
+								"<input type='text' id='fid'  value='"+expedienteArrayFinal[28].replace(/[+]/g,' ')+"'"+
 									" class='form-control'>"+	
 								"<div class='row col-sm-12'>"+
 								"<label for='observaciones' class='form-control-label'>Observaciones</label>"+
-						        "<textarea id='observaciones' rows='6' cols='40'></textarea>"+
+						        "<textarea id='observaciones' rows='6'   cols='40'>"+expedienteArrayFinal[29].replace(/[+]/g,' ')+"</textarea>"+
 							    "</div>"+
 								"<div class='form-group col-xs-10 col-sm-4 col-md-4 col-lg-4'>"+
 									"<br>"+
@@ -246,7 +229,7 @@ function selectexpedient(expediente){
 							    "</div>"+
 								    
 								"<div class='form-group col-xs-10 col-sm-4 col-md-4 col-lg-4 text-right'>"+
-									"<button type='button' class='btn btn-outline-primary btn-sm' onclick='saveexpedient()'>"+
+									"<button type='button' class='btn btn-outline-primary btn-sm' onclick='reescribirexpedient()'>"+
 										"<i class='fa fa-save (alias)'> </i>&nbsp; Guardar"+
 									"</button>"+
 								"</div>"+
@@ -256,10 +239,20 @@ function selectexpedient(expediente){
 				"</div>"+
 			"</div>"+
 		"</div>");
-
 	
 	
+	if (expedienteArrayFinal[14]== 1){
+		$("#antilavado").prop('checked', true);
+	}
+	if (expedienteArrayFinal[26]== 1){
+		$("#vulnerable").prop('checked', true);
+	}
+	if (expedienteArrayFinal[27]== 1){
+		$("#nopaso").prop('checked', true);
+	}
 }
+
+
 
 
 

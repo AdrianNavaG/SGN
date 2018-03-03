@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  ~ Copyright 2009 Alvaro Israel Sejas
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~ http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  ~
+  ~ HelloWorldReport.jrxml, creation: 29/05/2009, modifed: 28/05/2009
+  -->
+
+<!--created by alvaro-->
+<!DOCTYPE jasperReport PUBLIC "-//JasperReports//DTD Report Design//EN" "http://jasperreports.sourceforge.net/dtds/jasperreport.dtd">
+<jasperReport
+        name="HelloWorldReport"
+        columnCount="1"
+        pageWidth="612"
+        pageHeight="792"
+        columnWidth="562"
+        columnSpacing="0"
+        leftMargin="30"
+        rightMargin="20"
+        topMargin="30"
+        bottomMargin="30"
+        whenNoDataType="AllSectionsNoDetail"
+        isTitleNewPage="false"
+        isSummaryNewPage="false">
+              
+    <style
+        name="titleStyle"
+        isDefault="true"
+        fontName="Helvetica"
+        fontSize="12"
+        isBold="true"
+        isItalic="false"
+        isUnderline="false"
+        isStrikeThrough="false"/>
+		<parameter name = "variable" class = "java.lang.String"/>
+		<queryString>
+			<![CDATA[select nombre from CLIENTES WHERE EDAD = 15]]>
+		</queryString>
+		<field name="NOMBRE" class="java.lang.String"/>
+
+    <!--*************TITLE******************-->
+    <title>
+        <band height="20" isSplitAllowed="true">
+       
+            <textField isStretchWithOverflow="true" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"
+                       hyperlinkTarget="Self">
+                <reportElement
+                        style="titleStyle"
+                        x="0"
+                        y="4"
+                        width="550"
+                        height="13"
+                        key="date_text"
+                        stretchType="RelativeToTallestObject"
+                        positionType="Float"/>
+                <box padding="1">
+                    <pen lineWidth="0.0" lineColor="#000000" lineStyle="Solid"/>
+                </box>
+                <textElement textAlignment="Left"/>
+                <textFieldExpression class="java.lang.String"><![CDATA["Hello world, from JasperReports Hello world, from JasperReportsHello world, from JasperReportsHello world, from JasperReportsHello world, from JasperReportsHello world, from JasperReportsHello world, from JasperReportsHello world, from JasperReportsHello world, from JasperReportsHello world, from JasperReportsHello world, from JasperReports "]]>
+                </textFieldExpression>
+                <anchorNameExpression>
+              		 <![CDATA[$P{variable}]]>
+            	</anchorNameExpression>
+               </textField>
+          </band>
+    </title>
+    <pageHeader>
+        <band height="20" isSplitAllowed="true">
+		<textField isStretchWithOverflow="true" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None" hyperlinkTarget="Self">
+                  <reportElement
+                        style="titleStyle"
+                        x="0"
+                        y="6"
+                        width="550"
+                        height="13"
+                        key="date_text"
+                        stretchType="RelativeToTallestObject"
+                        positionType="Float"/>
+					<textFieldExpression class = "java.lang.String">
+					   <![CDATA[$P{variable}]]>
+					</textFieldExpression>
+		</textField>
+		<textField>
+                <reportElement x="0" y="0" width="100" height="20"/>
+                <textElement/>
+                <textFieldExpression><![CDATA[$F{NOMBRE}]]></textFieldExpression>
+        </textField>
+        </band>
+    </pageHeader>
+    <columnHeader>
+        <band height="0" isSplitAllowed="true"/>
+    </columnHeader>
+    <detail>
+        <band height="0" isSplitAllowed="true"/>
+    </detail>
+    <columnFooter>
+        <band height="0" isSplitAllowed="true"/>
+    </columnFooter>
+    <pageFooter>
+        <band height="0" isSplitAllowed="true"/>
+    </pageFooter>
+    <summary>
+        <band height="0" isSplitAllowed="true"/>
+    </summary>
+</jasperReport>

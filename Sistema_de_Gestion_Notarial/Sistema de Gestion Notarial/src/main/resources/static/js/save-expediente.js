@@ -1,5 +1,4 @@
 
-
 function saveexpedient(){
 
 	var expediente = $('#expediente').val();
@@ -95,4 +94,32 @@ function saveexpedient(){
 //		}
 	});
 
+}
+
+
+
+function reescribirexpedient(){
+	
+	var expediente = $('#expediente').val();
+	var credito = $('#credito').val();
+	
+	
+	$.ajax({
+		type: "POST",
+		url: "expediente/rewrite", 
+		data:{ 
+			expediente:expediente, 
+			credito:credito
+			
+		},
+	success: function(response){
+		if(response==1)
+			$( "#labelModal" ).text( SUCCESS_SAVE_EXPEDIENTE );
+		else
+			$( "#labelModal" ).text( ERROR_SAVE_EXPEDIENTE );
+
+		$( "#modalAlert" ).trigger( "click" );
+		
+	}
+	});
 }
